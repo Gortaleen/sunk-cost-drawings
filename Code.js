@@ -24,12 +24,10 @@ function fileOneDraw(curVal) {
     startColumn,
     numRows,
     numColumns)[0][0];
-  //var drawDate = new Date(curVal.draw_date_display);
   var drawDate = new Date(curVal.draw_date);
   var rowContents = [];
   if (drawDate > lastDate) {
     rowContents = [
-      //curVal.draw_date_display,
       curVal.draw_date,
       curVal.winning_num,
       curVal.jackpot,
@@ -57,8 +55,7 @@ function getAndFileResults(sheetObj) {
   var response = UrlFetchApp.fetch(
     lotteryUrl
     + "/data/json/games/lottery/"
-    + gameId
-    + ".json"
+    + gameId + ".json"
   );
   var lotteryJson = JSON.parse(response.getContentText());
   //var gameName = lotteryJson.title;
