@@ -2,39 +2,6 @@
 /*global PropertiesService, SpreadsheetApp, UrlFetchApp*/
 
 /**
- * find extends Array object and is recursive
- *      it returns the first array item for which
- *      the passed in function--matchFxn--returns true
- *      or returns--undefined--if no match is found.
- * @param {object} array
- * @param {object} matchFxn
- * @returns {object}
- */
-function find(array, matchFxn) {
-  "use strict";
-  if (!array) {
-    return undefined;
-  }
-  if (array.length === 0) {
-    return undefined;
-  }
-  if (matchFxn(array[0]) !== true) {
-    find(array.slice(1), matchFxn);
-  }
-  return array[0];
-}
-
-/**
- * @param {object} matchFxn provides criteria 
- *                          for array element match.
- * @this {object} array to be matched
- */
-Array.prototype.find = function (matchFxn) {
-  "use strict";
-  return find(this, matchFxn);
-};
-
-/**
  * @todo Write the documentation.
  */
 function getGameIdArr(curVal) {
