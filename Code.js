@@ -56,11 +56,9 @@ function getAndFileResults(sheetObj) {
   var gameId = gameIdArr[1];
   var response = UrlFetchApp.fetch(
     lotteryUrl
-    +
-    //'/data/json/search/lotterygames/' +
-    //gameId + '-data.json'
-    "/data/json/games/lottery/"
-    + gameId + ".json"
+    + "/data/json/games/lottery/"
+    + gameId
+    + ".json"
   );
   var lotteryJson = JSON.parse(response.getContentText());
   //var gameName = lotteryJson.title;

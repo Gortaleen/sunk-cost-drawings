@@ -1,0 +1,205 @@
+https://www.masslottery.com/past-results/mega_millions?start_date=2020-06-01&end_date=2020-07-06
+
+;;
+
+document.querySelector("#MainContainer > table > tbody > tr:nth-child(1)")
+...
+document.querySelector("#MainContainer > table > tbody > tr:nth-child(10)")
+
+;;
+
+<tbody>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Fri, Jul 3, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">20</div>
+                    <div class="winning-number-ball-circle solid">40</div>
+                    <div class="winning-number-ball-circle solid">44</div>
+                    <div class="winning-number-ball-circle solid">45</div>
+                    <div class="winning-number-ball-circle solid">50</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">24</div>
+                    <div class="winning-number-ball-multiplier">2X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$62 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Tue, Jun 30, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">9</div>
+                    <div class="winning-number-ball-circle solid">16</div>
+                    <div class="winning-number-ball-circle solid">29</div>
+                    <div class="winning-number-ball-circle solid">37</div>
+                    <div class="winning-number-ball-circle solid">53</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">11</div>
+                    <div class="winning-number-ball-multiplier">2X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$53 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Fri, Jun 26, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">19</div>
+                    <div class="winning-number-ball-circle solid">33</div>
+                    <div class="winning-number-ball-circle solid">37</div>
+                    <div class="winning-number-ball-circle solid">56</div>
+                    <div class="winning-number-ball-circle solid">57</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">6</div>
+                    <div class="winning-number-ball-multiplier">2X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$44 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Tue, Jun 23, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">6</div>
+                    <div class="winning-number-ball-circle solid">20</div>
+                    <div class="winning-number-ball-circle solid">37</div>
+                    <div class="winning-number-ball-circle solid">40</div>
+                    <div class="winning-number-ball-circle solid">48</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">15</div>
+                    <div class="winning-number-ball-multiplier">3X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$35 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Fri, Jun 19, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">11</div>
+                    <div class="winning-number-ball-circle solid">34</div>
+                    <div class="winning-number-ball-circle solid">36</div>
+                    <div class="winning-number-ball-circle solid">52</div>
+                    <div class="winning-number-ball-circle solid">66</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">7</div>
+                    <div class="winning-number-ball-multiplier">2X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$26 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Tue, Jun 16, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">21</div>
+                    <div class="winning-number-ball-circle solid">23</div>
+                    <div class="winning-number-ball-circle solid">33</div>
+                    <div class="winning-number-ball-circle solid">35</div>
+                    <div class="winning-number-ball-circle solid">42</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">6</div>
+                    <div class="winning-number-ball-multiplier">3X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$22 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Fri, Jun 12, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">9</div>
+                    <div class="winning-number-ball-circle solid">14</div>
+                    <div class="winning-number-ball-circle solid">57</div>
+                    <div class="winning-number-ball-circle solid">67</div>
+                    <div class="winning-number-ball-circle solid">70</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">2</div>
+                    <div class="winning-number-ball-multiplier">3X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$20 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Tue, Jun 9, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">1</div>
+                    <div class="winning-number-ball-circle solid">5</div>
+                    <div class="winning-number-ball-circle solid">9</div>
+                    <div class="winning-number-ball-circle solid">10</div>
+                    <div class="winning-number-ball-circle solid">23</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">22</div>
+                    <div class="winning-number-ball-multiplier">2X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$410 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Fri, Jun 5, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">32</div>
+                    <div class="winning-number-ball-circle solid">35</div>
+                    <div class="winning-number-ball-circle solid">37</div>
+                    <div class="winning-number-ball-circle solid">47</div>
+                    <div class="winning-number-ball-circle solid">55</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">22</div>
+                    <div class="winning-number-ball-multiplier">3X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$378 million</span></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td data-title="Date &nbsp;">
+            <div class="PastResults-row">
+                <p class="PastResults-row-draw-date">Tue, Jun 2, 2020</p>
+                <div class="winning-number-ball-group winning-number-ball-group-no-wrap">
+                    <div class="winning-number-ball-circle solid">9</div>
+                    <div class="winning-number-ball-circle solid">20</div>
+                    <div class="winning-number-ball-circle solid">23</div>
+                    <div class="winning-number-ball-circle solid">26</div>
+                    <div class="winning-number-ball-circle solid">29</div>
+                    <div class="winning-number-ball-circle-no-border solid" style="color: rgb(255, 255, 255); background-color: rgb(36, 64, 143);">8</div>
+                    <div class="winning-number-ball-multiplier">3X
+                        <hr class="winning-number-ball-multiplier-underline">
+                    </div>
+                </div>
+                <p class="PastResults-row-jackpot">Jackpot: <span>$356 million</span></p>
+            </div>
+        </td>
+    </tr>
+</tbody>
+
+;;
+
