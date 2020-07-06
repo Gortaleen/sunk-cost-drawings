@@ -1,0 +1,8 @@
+# Google Apps Script ID
+.clasp.json
+# Visual Studio Code Workpace for the project
+*.code-workspace
+# Caret project
+*-caret-project
+#
+Notes.txt
