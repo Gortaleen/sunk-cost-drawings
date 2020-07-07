@@ -1,4 +1,4 @@
-/*jslint browser, devel, maxlen: 80, single, this, white*/
+/*jslint browser:true, devel:true, this:true, white:true*/
 /*global NextJackpot, PropertiesService, SpreadsheetApp, UrlFetchApp*/
 
 /**
@@ -23,6 +23,11 @@ function fileOneDraw(curVal) {
   drawDate.setMinutes(drawDate.getMinutes() + drawDate.getTimezoneOffset());
 
   if (drawDate > lastDate) {
+    // stDouble can be 0 which is less than ""
+    curVal.extras.stDoubler = (
+      (curVal.extras.stDoubler === 0)
+      ? "0"
+      : "");
     rowContents = [
             drawDate.toLocaleDateString(
         "en-US", {
@@ -119,26 +124,23 @@ function main() {
   );
   var lotteryUrl = PropertiesService.getScriptProperties()
     .getProperty("massLotteryUrl");
-  var gameRulesOBJ = JSON.parse(UrlFetchApp.fetch(
-    lotteryUrl
-    + "/api/v1/games"));
-  var nextDrawDatesOBJ = JSON.parse(UrlFetchApp.fetch(
-    lotteryUrl
-    + "/api/v1/games/next-draw-dates"));
-  var estJackpotsOBJ = JSON.parse(UrlFetchApp.fetch(
-    lotteryUrl
-    + "/api/v1/draw-results"));
+  var gameRulesOBJ = JSON.parse(
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games"));
+  var nextDrawDatesOBJ = JSON.parse(
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games/next-draw-dates"));
+  var estJackpotsOBJ = JSON.parse(
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/draw-results"));
 
   // start update drawing results sheets
   gameRulesSs.getSheets()
     .forEach(
       getAndFileResults, {
-        gameRulesSs: gameRulesSs,
-        drawingsSs: drawingsSs,
-        lotteryUrl: lotteryUrl,
-        gameRulesOBJ: gameRulesOBJ,
-        nextDrawDatesOBJ: nextDrawDatesOBJ,
-        estJackpotsOBJ: estJackpotsOBJ
+        "gameRulesSs": gameRulesSs,
+        "drawingsSs": drawingsSs,
+        "lotteryUrl": lotteryUrl,
+        "gameRulesOBJ": gameRulesOBJ,
+        "nextDrawDatesOBJ": nextDrawDatesOBJ,
+        "estJackpotsOBJ": estJackpotsOBJ
       }
     );
   // end update drawing results sheets
