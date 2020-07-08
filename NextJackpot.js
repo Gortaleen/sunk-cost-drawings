@@ -35,6 +35,7 @@ const NextJackpot = (function () {
     const column = 6;
     const numRows = 1;
     const numColumns = 2;
+    let estJackpotDrawDate = "";
 
     if (gameRule !== true) {
       throw "Game Rule JSON not found";
@@ -50,8 +51,13 @@ const NextJackpot = (function () {
       if (estJackpot === true) {
         jackpot = estJackpotsOBJ.estimatedJackpot[jackpotIndex]
           .estimatedJackpotUSD;
-        jackpotDateStr = estJackpotsOBJ.estimatedJackpot[jackpotIndex]
-          .drawDateFor;
+        // TODO: fix this. the value is YYYY-MM-DD without a TZ offset
+        estJackpotDrawDate = new Date(
+          estJackpotsOBJ.estimatedJackpot[jackpotIndex].drawDateFor);
+        estJackpotDrawDate.setMinutes(
+          estJackpotDrawDate.getMinutes()
+          + estJackpotDrawDate.getTimezoneOffset());
+        jackpotDateStr = estJackpotDrawDate.toString();
       } else {
         throw "Game Jackpot not found";
       }
