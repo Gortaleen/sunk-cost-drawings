@@ -51,13 +51,14 @@ const NextJackpot = (function () {
       if (estJackpot === true) {
         jackpot = estJackpotsOBJ.estimatedJackpot[jackpotIndex]
           .estimatedJackpotUSD;
-        // TODO: fix this. the value is YYYY-MM-DD without a TZ offset
         estJackpotDrawDate = new Date(
           estJackpotsOBJ.estimatedJackpot[jackpotIndex].drawDateFor);
+        // estJackpotDrawDate is in YYYY-MM-DD format
+        // need to add TZ offset
         estJackpotDrawDate.setMinutes(
           estJackpotDrawDate.getMinutes()
           + estJackpotDrawDate.getTimezoneOffset());
-        jackpotDateStr = estJackpotDrawDate.toString();
+        jackpotDateStr = estJackpotDrawDate.toISOString();
       } else {
         throw "Game Jackpot not found";
       }
