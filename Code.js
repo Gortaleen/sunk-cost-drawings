@@ -18,16 +18,16 @@ function fileOneDraw(curVal) {
     numColumns)[0][0];
   var drawDate = new Date(curVal.drawDate);
   var rowContents = [];
+  var stDoubler = "";
 
   // need offset due to curVal.drawDate in YYYY-MM-DD (i.e., UTC) format
   drawDate.setMinutes(drawDate.getMinutes() + drawDate.getTimezoneOffset());
 
   if (drawDate > lastDate) {
-    // stDouble can be 0 which is less than ""
-    curVal.extras.stDoubler = (
-      (curVal.extras.stDoubler === 0)
-      ? "0"
-      : "");
+    // stDoubler can be 0 which is less than ""
+    if (curVal.extras.stDoubler === 0) {
+      stDoubler = "0";
+    }
     rowContents = [
             drawDate.toLocaleDateString(
         "en-US", {
@@ -53,7 +53,7 @@ function fileOneDraw(curVal) {
       || "",
       curVal.extras.megaplier
       || curVal.extras.powerplay
-      || curVal.extras.stDoubler
+      || stDoubler
       || ""
         ];
     drawingsSheet.appendRow(rowContents);
