@@ -24,10 +24,10 @@ function fileOneDraw(curVal) {
 
   if (drawDate > lastDate) {
     // stDouble can be 0 which is less than ""
-    curVal.extras.stDoubler = (
-      (curVal.extras.stDoubler === 0)
-      ? "0"
-      : "");
+    // curVal.extras.stDoubler = (
+    //   (curVal.extras.stDoubler === 0)
+    //   ? "0"
+    //   : "");
     rowContents = [
             drawDate.toLocaleDateString(
         "en-US", {
@@ -39,14 +39,16 @@ function fileOneDraw(curVal) {
             curVal.winningNumbers.map(
         (num) => num.toString().padStart(2, 0)
       ).join("-"),
-            curVal.jackpot.toLocaleString(
-        "en-US", {
-          style: "currency",
-          currency: "USD",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0
-        }
-      ),
+      //
+      0,
+      //       curVal.jackpot.toLocaleString(
+      //   "en-US", {
+      //     style: "currency",
+      //     currency: "USD",
+      //     minimumFractionDigits: 0,
+      //     maximumFractionDigits: 0
+      //   }
+      // ),
       curVal.extras.megaball
       || curVal.extras.powerball
       || curVal.extras.luckyball
