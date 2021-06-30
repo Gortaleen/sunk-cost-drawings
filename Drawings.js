@@ -15,7 +15,8 @@ function fileOneDraw(curVal) {
     startRow,
     startColumn,
     numRows,
-    numColumns)[0][0];
+    numColumns
+  )[0][0];
   var drawDate = new Date(curVal.drawDate);
   var rowContents = [];
 
@@ -23,40 +24,37 @@ function fileOneDraw(curVal) {
   drawDate.setMinutes(drawDate.getMinutes() + drawDate.getTimezoneOffset());
 
   if (drawDate > lastDate) {
-    // stDouble can be 0 which is less than ""
+    // masslottery is not currently returning all values
     curVal.extras = curVal.extras || {};
-    curVal.extras.stDoubler = (
-      (curVal.extras?.stDoubler === 0)
-      ? "0"
-      : "");
+    curVal.jackpot = curVal.jackpot || 0;
+    // stDoubler can be 0 which is less than ""
+    curVal.extras.stDoubler = curVal.extras.stDoubler
+      ? curVal.extras.stDoubler.toString()
+      : "";
     rowContents = [
-            drawDate.toLocaleDateString(
-        "en-US", {
-          "year": "numeric",
-          "month": "2-digit",
-          "day": "2-digit"
-        }
-      ),
-            curVal.winningNumbers.map(
-        (num) => num.toString().padStart(2, 0)
-      ).join("-"),
-            curVal.jackpot?.toLocaleString(
-        "en-US", {
-          style: "currency",
-          currency: "USD",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0
-        }
-      ),
-      curVal.extras?.megaball
-      || curVal.extras?.powerball
-      || curVal.extras?.luckyball
+      drawDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }),
+      curVal.winningNumbers
+        .map((num) => num.toString().padStart(2, 0))
+        .join("-"),
+      curVal.jackpot.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      }),
+      curVal.extras.megaball
+      || curVal.extras.powerball
+      || curVal.extras.luckyball
       || "",
-      curVal.extras?.megaplier
-      || curVal.extras?.powerplay
-      || curVal.extras?.stDoubler
-      || ""
-        ];
+      curVal.extras.megaplier
+      || curVal.extras.powerplay
+      || curVal.extras.stDoubler
+      || "",
+    ];
     drawingsSheet.appendRow(rowContents);
   }
 }
@@ -116,33 +114,31 @@ function getAndFileResults(sheetObj) {
 function main() {
   "use strict";
   var gameRulesSs = SpreadsheetApp.openById(
-    PropertiesService.getScriptProperties()
-    .getProperty("gameRulesSsId")
+    PropertiesService.getScriptProperties().getProperty("gameRulesSsId")
   );
   var drawingsSs = SpreadsheetApp.openById(
-    PropertiesService.getScriptProperties()
-    .getProperty("drawingsSsId")
+    PropertiesService.getScriptProperties().getProperty("drawingsSsId")
   );
   var lotteryUrl = PropertiesService.getScriptProperties()
     .getProperty("massLotteryUrl");
   var gameRulesOBJ = JSON.parse(
-    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games"));
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games")
+  );
   var nextDrawDatesOBJ = JSON.parse(
-    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games/next-draw-dates"));
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/games/next-draw-dates")
+  );
   var estJackpotsOBJ = JSON.parse(
-    UrlFetchApp.fetch(lotteryUrl + "/api/v1/draw-results"));
+    UrlFetchApp.fetch(lotteryUrl + "/api/v1/draw-results")
+  );
 
   // start update drawing results sheets
-  gameRulesSs.getSheets()
-    .forEach(
-      getAndFileResults, {
-        "gameRulesSs": gameRulesSs,
-        "drawingsSs": drawingsSs,
-        "lotteryUrl": lotteryUrl,
-        "gameRulesOBJ": gameRulesOBJ,
-        "nextDrawDatesOBJ": nextDrawDatesOBJ,
-        "estJackpotsOBJ": estJackpotsOBJ
-      }
-    );
+  gameRulesSs.getSheets().forEach(getAndFileResults, {
+    gameRulesSs: gameRulesSs,
+    drawingsSs: drawingsSs,
+    lotteryUrl: lotteryUrl,
+    gameRulesOBJ: gameRulesOBJ,
+    nextDrawDatesOBJ: nextDrawDatesOBJ,
+    estJackpotsOBJ: estJackpotsOBJ,
+  });
   // end update drawing results sheets
 }
