@@ -26,9 +26,9 @@ function fileOneDraw(curVal) {
     // stDouble can be 0 which is less than ""
     curVal.extras = curVal.extras || {};
     curVal.extras.stDoubler = (
-      (curVal.extras?.stDoubler === 0)
-      ? "0"
-      : "");
+      (!curVal.extras)
+      ? ""
+      : curVal.extras.stDoubler.toString());
     rowContents = [
             drawDate.toLocaleDateString(
         "en-US", {
