@@ -17,6 +17,12 @@ function fileOneDraw(curVal) {
     numRows,
     numColumns
   )[0][0];
+  var prevEstJackpot = drawingsSheet.getSheetValues(
+    startRow,
+    7,
+    numRows,
+    numColumns
+  )[0][0] || "0";
   var drawDate = new Date(curVal.drawDate);
   var rowContents = [];
 
@@ -26,7 +32,7 @@ function fileOneDraw(curVal) {
   if (drawDate > lastDate) {
     // masslottery is not currently returning all values
     curVal.extras = curVal.extras || {};
-    curVal.jackpot = curVal.jackpot || 0;
+    curVal.jackpot = curVal.jackpot || +prevEstJackpot;
     // stDoubler can be 0 which is less than ""
     curVal.extras.stDoubler = curVal.extras.stDoubler
       ? curVal.extras.stDoubler.toString()

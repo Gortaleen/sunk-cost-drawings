@@ -8,7 +8,7 @@
     "ecmaVersion": 2018
   },
   "rules": {
-    "linebreak-style": ["error", "unix"],
+    // "linebreak-style": ["error", "unix"],
     "operator-linebreak": ["error", "before"],
     "quotes": [
       "error",
