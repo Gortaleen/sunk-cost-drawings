@@ -4,3 +4,4 @@
 *-caret-project
 #
 *.txt
+.clasp.json
