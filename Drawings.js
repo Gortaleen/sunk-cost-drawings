@@ -123,7 +123,7 @@ function main() {
     PropertiesService.getScriptProperties().getProperty("gameRulesSsId")
   );
   var drawingsSs = SpreadsheetApp.openById(
-    PropertiesService.getScriptProperties().getProperty("drawingsSsId")
+    PropertiesService.getScriptProperties().getProperty("drawnNumsSsId")
   );
   var lotteryUrl = PropertiesService.getScriptProperties()
     .getProperty("massLotteryUrl");
