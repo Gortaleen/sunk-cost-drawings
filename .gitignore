@@ -1,7 +1,5 @@
-# Visual Studio Code Workpace for the project
-*.code-workspace
-# Caret project
-*-caret-project
-#
-*.txt
-.clasp.json
+# Dependency directory
+node_modules
+
+# Ignore built ts files
+dist

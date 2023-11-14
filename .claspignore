@@ -1,4 +1,14 @@
+# ignore all files
 **/**
-!Drawings.js
-!NextJackpot.js
+
+# except the extensions
 !appsscript.json
+!**/*.gs
+!**/*.js
+!**/*.ts
+!**/*.html
+
+# ignore even valid files if in
+.git/**
+node_modules/**
+dist/**
